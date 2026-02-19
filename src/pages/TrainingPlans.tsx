@@ -70,7 +70,7 @@ const TrainingPlans = () => {
                 ← Voltar
               </button>
             )}
-            <h1 className="font-heading text-4xl text-foreground">
+            <h1 className="font-heading text-4xl ">
               {view === "list" ? "PLANOS DE TREINO" : view === "create" ? "CRIAR PLANO" : selectedPlan?.name.toUpperCase()}
             </h1>
             <p className="text-muted-foreground text-sm mt-1">

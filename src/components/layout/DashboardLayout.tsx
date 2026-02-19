@@ -12,11 +12,11 @@ interface DashboardLayoutProps {
 const studentMenu = [
   { label: "Meu Perfil", icon: User, path: "/dashboard-aluno" },
   { label: "Meus Profissionais", icon: Users, path: "/dashboard-aluno?tab=profissionais" },
-  { label: "Planos de Treino", icon: Dumbbell, path: "/planos-treino" },
-  { label: "Planos Alimentares", icon: Apple, path: "/planos-alimentares" },
-  { label: "Agenda", icon: Calendar, path: "/agenda" },
-  { label: "Recibos", icon: Receipt, path: "/recibos" },
-  { label: "Chat", icon: MessageCircle, path: "/chat" },
+  { label: "Planos de Treino", icon: Dumbbell, path: "/planos-treino-aluno" },
+  { label: "Planos Alimentares", icon: Apple, path: "/planos-alimentares-aluno" },
+  { label: "Agenda", icon: Calendar, path: "/agenda-aluno" },
+  { label: "Recibos", icon: Receipt, path: "/recibos-aluno" },
+  { label: "Chat", icon: MessageCircle, path: "/chat-aluno" },
 ];
 
 const proMenu = [

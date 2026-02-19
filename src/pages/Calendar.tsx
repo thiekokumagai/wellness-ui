@@ -15,7 +15,7 @@ const statusVariant: Record<string, "success" | "pending" | "destructive"> = {
   cancelado: "destructive",
 };
 
-const Agenda = () => {
+const Calendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date(2026, 1, 1));
   const [selectedDay, setSelectedDay] = useState<number | null>(19);
 
@@ -190,4 +190,4 @@ const Agenda = () => {
   );
 };
 
-export default Agenda;
+export default Calendar;

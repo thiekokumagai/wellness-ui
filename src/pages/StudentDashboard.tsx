@@ -13,8 +13,8 @@ const StudentDashboard = () => {
     <DashboardLayout type="student">
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl font-bold">Olá, João! 👋</h1>
-          <p className="text-muted-foreground">Aqui está um resumo da sua jornada wellness</p>
+          <h1 className="text-2xl font-bold font-segoe">Olá, João! 👋</h1>
+          <p className="text-muted-foreground">Aqui está um resumo da sua jornada</p>
         </div>
 
         {/* Stats */}
@@ -43,7 +43,7 @@ const StudentDashboard = () => {
           {/* Upcoming appointments */}
           <Card className="border-0 shadow-card">
             <CardHeader>
-              <CardTitle className="text-lg">Próximos Atendimentos</CardTitle>
+              <CardTitle className="text-lg font-segoe">Próximos Atendimentos</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               {upcomingAppointments.map((a) => (
@@ -61,7 +61,7 @@ const StudentDashboard = () => {
           {/* Active professionals */}
           <Card className="border-0 shadow-card">
             <CardHeader>
-              <CardTitle className="text-lg">Profissionais Ativos</CardTitle>
+              <CardTitle className="text-lg font-segoe">Profissionais Ativos</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               {activePros.map((p) => (
@@ -81,7 +81,7 @@ const StudentDashboard = () => {
         {/* Notifications */}
         <Card className="border-0 shadow-card">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-lg"><Bell className="h-4 w-4 text-primary" /> Notificações</CardTitle>
+            <CardTitle className="flex items-center gap-2 text-lg font-segoe"><Bell className="h-4 w-4 text-primary" /> Notificações</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
             {[

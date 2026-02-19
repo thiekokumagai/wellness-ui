@@ -9,13 +9,18 @@ import ProfessionalProfile from "./pages/ProfessionalProfile";
 import StudentDashboard from "./pages/StudentDashboard";
 import ProfessionalDashboard from "./pages/ProfessionalDashboard";
 import Chat from "./pages/Chat";
-import Agenda from "./pages/Agenda";
+import Agenda from "./pages/Calendar";
 import Quiz from "./pages/Quiz";
 import Subscriptions from "./pages/Subscriptions";
 import TrainingPlans from "./pages/TrainingPlans";
 import MealPlans from "./pages/MealPlans";
 import Receipts from "./pages/Receipts";
 import NotFound from "./pages/NotFound";
+import StudentChat from "./pages/StudentChat";
+import StudentReceipts from "./pages/StudentReceipts";
+import StudentCalendar from "./pages/StudentCalendar";
+import StudentMealPlans from "./pages/StudentMealPlans";
+import StudentTrainingPlans from "./pages/StudentTrainingPlans";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +43,11 @@ const App = () => (
           <Route path="/planos-treino" element={<TrainingPlans />} />
           <Route path="/planos-alimentares" element={<MealPlans />} />
           <Route path="/recibos" element={<Receipts />} />
+          <Route path="/chat-aluno" element={<StudentChat />} />
+          <Route path="/recibos-aluno" element={<StudentReceipts />} />
+          <Route path="/agenda-aluno" element={<StudentCalendar />} />
+          <Route path="/planos-alimentares-aluno" element={<StudentMealPlans />} />
+          <Route path="/planos-treino-aluno" element={<StudentTrainingPlans />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
