@@ -18,8 +18,73 @@ interface Plan {
 }
 
 const mockPlans: Plan[] = [
-  { id: 1, weekday: "Segunda-feira", name: "Peito e ombro", exercises: [{ name: "Supino Reto", series: "4", reps: "10-12", obs: "Controle a descida" }, { name: "Agachamento", series: "4", reps: "12", obs: "Joelho alinhado" }], createdAt: "10/02/2026" },
-  { id: 2, weekday: "Terça-feira", name: "Perna", exercises: [{ name: "Prancha", series: "3", reps: "45s", obs: "" }, { name: "Burpee", series: "3", reps: "15", obs: "Descanso 60s" }], createdAt: "12/02/2026" },
+   {
+    id: 1,
+    weekday: "Segunda-feira",
+    name: "Peito e ombro",
+    exercises: [
+      { name: "Supino Reto", series: "4", reps: "10-12", obs: "Controle a descida" },
+      { name: "Desenvolvimento com Halter", series: "4", reps: "10", obs: "Sem travar o cotovelo" },
+      { name: "Elevação Lateral", series: "3", reps: "12-15", obs: "Movimento controlado" }
+    ],
+    createdAt: "10/02/2026"
+  },
+  {
+    id: 2,
+    weekday: "Terça-feira",
+    name: "Perna",
+    exercises: [
+      { name: "Agachamento", series: "4", reps: "10-12", obs: "Joelho alinhado" },
+      { name: "Leg Press", series: "4", reps: "12", obs: "Não estender totalmente" },
+      { name: "Panturrilha em Pé", series: "4", reps: "15-20", obs: "Segura 1s no topo" }
+    ],
+    createdAt: "12/02/2026"
+  },
+  {
+    id: 3,
+    weekday: "Quarta-feira",
+    name: "Costas",
+    exercises: [
+      { name: "Puxada na Frente", series: "4", reps: "10-12", obs: "Peito aberto" },
+      { name: "Remada Curvada", series: "4", reps: "10", obs: "Coluna neutra" },
+      { name: "Pulldown", series: "3", reps: "12", obs: "Contrai no final" }
+    ],
+    createdAt: "14/02/2026"
+  },
+  {
+    id: 4,
+    weekday: "Quinta-feira",
+    name: "Braços",
+    exercises: [
+      { name: "Rosca Direta", series: "4", reps: "10-12", obs: "Sem balanço" },
+      { name: "Rosca Martelo", series: "3", reps: "12", obs: "Controle total" },
+      { name: "Tríceps Corda", series: "4", reps: "12", obs: "Abre no final" }
+    ],
+    createdAt: "15/02/2026"
+  },
+  {
+    id: 5,
+    weekday: "Sexta-feira",
+    name: "Core e cardio",
+    exercises: [
+      { name: "Prancha", series: "3", reps: "45-60s", obs: "Abdômen firme" },
+      { name: "Abdominal Infra", series: "3", reps: "15", obs: "Sem puxar o pescoço" },
+      { name: "Burpee", series: "4", reps: "12", obs: "Descanso 60s" }
+    ],
+    createdAt: "16/02/2026"
+  },
+  {
+    id: 6,
+    weekday: "Sábado",
+    name: "Full body",
+    exercises: [
+      { name: "Levantamento Terra", series: "4", reps: "8-10", obs: "Postura primeiro" },
+      { name: "Flexão de Braço", series: "3", reps: "Máx", obs: "Amplitude total" },
+      { name: "Afundo", series: "3", reps: "12 cada perna", obs: "Passo firme" }
+    ],
+    createdAt: "17/02/2026"
+  }  
+
 ];
 
 const StudentTrainingPlans = () => {
