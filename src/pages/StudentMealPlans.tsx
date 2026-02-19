@@ -99,14 +99,9 @@ const StudentMealPlans = () => {
               {view === "list" ? "PLANOS ALIMENTARES" : view === "create" ? "CRIAR PLANO" : selectedPlan?.name.toUpperCase()}
             </h1>
             <p className="text-muted-foreground text-sm mt-1">
-              {view === "list" ? `${plans.length} planos criados` : view === "create" ? "Configure o plano alimentar do aluno" : `Aluno: ${selectedPlan?.student}`}
+              {view === "list" ? `${plans.length} planos criados` : view === "create" ? "Configure o plano alimentar do aluno" : ``}
             </p>
           </div>
-          {view === "list" && (
-            <Button onClick={() => setView("create")} className="gradient-primary text-primary-foreground shadow-glow font-bold uppercase tracking-wider text-xs">
-              <Plus className="h-4 w-4" /> Novo Plano
-            </Button>
-          )}
         </div>
 
         {/* LIST */}
@@ -141,15 +136,7 @@ const StudentMealPlans = () => {
               </div>
             ))}
 
-            <div
-              onClick={() => setView("create")}
-              className="group cursor-pointer rounded-lg border border-dashed border-border bg-card/50 p-6 transition-all duration-300 hover:border-primary/50 flex flex-col items-center justify-center min-h-[160px] gap-3"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-md border border-dashed border-border group-hover:border-primary transition-all">
-                <Plus className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
-              </div>
-              <p className="text-sm text-muted-foreground group-hover:text-primary transition-colors font-medium">Criar novo plano</p>
-            </div>
+           
           </div>
         )}
 
@@ -199,70 +186,7 @@ const StudentMealPlans = () => {
             </div>
           </div>
         )}
-
-        {/* CREATE */}
-        {view === "create" && (
-          <div className="space-y-6">
-            <div className="grid gap-4 sm:grid-cols-3">
-              <div className="space-y-2">
-                <Label className="text-xs uppercase tracking-wider text-muted-foreground">Aluno</Label>
-                <select value={student} onChange={(e) => setStudent(e.target.value)} className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
-                  <option value="">Selecione o aluno</option>
-                  {mockStudents.map((s) => <option key={s.id} value={s.name}>{s.name}</option>)}
-                </select>
-              </div>
-              <div className="space-y-2">
-                <Label className="text-xs uppercase tracking-wider text-muted-foreground">Nome do Plano</Label>
-                <Input placeholder="Ex: Plano Emagrecimento" value={planName} onChange={(e) => setPlanName(e.target.value)} />
-              </div>
-              <div className="space-y-2">
-                <Label className="text-xs uppercase tracking-wider text-muted-foreground">Meta calórica (kcal)</Label>
-                <Input type="number" placeholder="2000" value={kcal} onChange={(e) => setKcal(e.target.value)} />
-              </div>
-            </div>
-
-            <div className="rounded-lg border border-border bg-card overflow-hidden">
-              <div className="flex items-center justify-between border-b border-border p-4">
-                <h2 className="font-bold text-sm uppercase tracking-wider text-foreground">Refeições</h2>
-                <Button variant="outline" size="sm" onClick={addMeal} className="text-xs uppercase tracking-wider gap-1">
-                  <Plus className="h-3 w-3" /> Adicionar
-                </Button>
-              </div>
-              <div className="divide-y divide-border">
-                {meals.map((m, i) => (
-                  <div key={i} className="grid grid-cols-[120px_90px_1fr_1fr_40px] gap-3 items-start px-4 py-3">
-                    <Input placeholder="Refeição" value={m.meal} onChange={(e) => updateMeal(i, "meal", e.target.value)} className="h-9" />
-                    <Input type="time" value={m.time} onChange={(e) => updateMeal(i, "time", e.target.value)} className="h-9" />
-                    <Input placeholder="Alimentos" value={m.foods} onChange={(e) => updateMeal(i, "foods", e.target.value)} className="h-9" />
-                    <Input placeholder="Observações..." value={m.obs} onChange={(e) => updateMeal(i, "obs", e.target.value)} className="h-9" />
-                    <Button variant="ghost" size="icon" className="h-9 w-9 text-muted-foreground hover:text-destructive" onClick={() => removeMeal(i)}>
-                      <Trash2 className="h-3.5 w-3.5" />
-                    </Button>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <Label className="text-xs uppercase tracking-wider text-muted-foreground">Observações Gerais</Label>
-              <Textarea placeholder="Instruções gerais, restrições alimentares, dicas..." rows={3} value={generalObs} onChange={(e) => setGeneralObs(e.target.value)} />
-            </div>
-
-            <div className="space-y-2">
-              <Label className="text-xs uppercase tracking-wider text-muted-foreground">Upload PDF (opcional)</Label>
-              <Input type="file" accept=".pdf" className="cursor-pointer" />
-            </div>
-
-            <div className="flex gap-3">
-              <Button onClick={savePlan} className="gradient-primary text-primary-foreground shadow-glow font-bold uppercase tracking-wider text-xs">
-                Salvar Plano
-              </Button>
-              <Button variant="outline" onClick={() => setView("list")} className="text-xs uppercase tracking-wider">
-                Cancelar
-              </Button>
-            </div>
-          </div>
-        )}
+       
       </div>
     </DashboardLayout>
   );
