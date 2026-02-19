@@ -17,6 +17,7 @@ export default {
         sans: ['"Space Grotesk"', "system-ui", "sans-serif"],
         heading: ['"Bebas Neue"', "system-ui", "sans-serif"],
         mono: ['"Space Mono"', "monospace"],
+        segoe: ["Segoe UI", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

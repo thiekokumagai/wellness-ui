@@ -60,8 +60,8 @@ const Catalog = () => {
       <Header />
       <div className="container py-8">
         <div className="mb-8">
-          <h1 className="mb-2 text-3xl font-bold">Encontre seu Profissional</h1>
-          <p className="text-muted-foreground">Explore nosso catálogo de profissionais de wellness qualificados</p>
+          <h1 className="mb-2 text-3xl font-bold font-segoe">Encontre seu Profissional</h1>
+          <p className="text-muted-foreground">Explore nosso catálogo de profissionais qualificados</p>
         </div>
 
         <div className="mb-6 flex gap-3">

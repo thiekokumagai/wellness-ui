@@ -19,7 +19,7 @@ const Index = () => {
       <section className="relative overflow-hidden min-h-[90vh] flex items-center">
         {/* Background image with aggressive overlay */}
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Wellness lifestyle" className="h-full w-full object-cover scale-105" />
+          <img src={heroImage} alt="Somma lifestyle" className="h-full w-full object-cover scale-105" />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         </div>
@@ -30,7 +30,7 @@ const Index = () => {
           <div className="absolute right-40 bottom-40 h-64 w-64 rounded-full bg-accent blur-[100px] opacity-50" />
         </div>
 
-        <div className="container relative z-10 py-24">
+        <div className="container relative z-10 pt-24 pb-18">
           <div className="max-w-3xl">
             {/* Eyebrow */}
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary animate-fade-in">
@@ -49,38 +49,16 @@ const Index = () => {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row animate-fade-in" style={{ animationDelay: "0.15s" }}>
-              <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-                <input
-                  type="text"
-                  placeholder="Personal trainer, nutricionista, cidade..."
-                  className="h-14 w-full rounded-lg border border-border bg-card/80 pl-12 pr-4 text-foreground backdrop-blur-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all"
-                />
-              </div>
+              
               <Link to="/catalogo">
                 <Button size="lg" className="h-14 gradient-primary text-primary-foreground shadow-glow font-bold uppercase tracking-wider px-8 hover:opacity-90 hover:shadow-lg transition-all">
-                  Buscar Agora
+                  Encontrar seu profissional
                   <ArrowRight className="h-5 w-5" />
                 </Button>
               </Link>
             </div>
 
-            <div className="mt-8 flex items-center gap-8 text-sm animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <div className="flex items-center gap-2">
-                <div className="flex -space-x-2">
-                  {["bg-primary", "bg-accent", "bg-primary/70"].map((c, i) => (
-                    <div key={i} className={`h-8 w-8 rounded-full ${c} border-2 border-background`} />
-                  ))}
-                </div>
-                <span className="text-muted-foreground">+500 profissionais</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <div className="flex gap-0.5">
-                  {[1,2,3,4,5].map(s => <Star key={s} className="h-3.5 w-3.5 fill-accent text-accent" />)}
-                </div>
-                <span className="text-muted-foreground">4.8 média</span>
-              </div>
-            </div>
+           
           </div>
         </div>
 
@@ -149,18 +127,19 @@ const Index = () => {
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             {[
-              {
-                icon: Dumbbell,
-                title: "Personal Trainers",
-                desc: "Musculação, HIIT, CrossFit, Yoga, Pilates e muito mais. Treinos presenciais ou online adaptados ao seu nível.",
-                count: "320+",
-                tag: "Mais procurado",
-              },
+              
               {
                 icon: Apple,
                 title: "Nutricionistas",
                 desc: "Nutrição esportiva, emagrecimento, nutrição clínica, vegana e mais. Planos alimentares totalmente personalizados.",
                 count: "180+",
+                tag: "Mais procurado",
+              },
+              {
+                icon: Dumbbell,
+                title: "Personal Trainers",
+                desc: "Musculação, HIIT, CrossFit, Yoga, Pilates e muito mais. Treinos presenciais ou online adaptados ao seu nível.",
+                count: "320+",
                 tag: "Alto impacto",
               },
             ].map((item) => (
@@ -194,8 +173,9 @@ const Index = () => {
       <section className="container py-24">
         <div className="mb-16 flex items-end justify-between">
           <div>
-            <p className="mb-2 text-xs font-bold uppercase tracking-widest text-primary">Destaque</p>
-            <h2 className="font-heading text-6xl text-foreground md:text-7xl">TOP<br />PROFISSIONAIS.</h2>
+            
+            <h2 className="font-heading text-6xl text-foreground md:text-7xl">PROFISSIONAIS</h2>
+            <p className="mb-2 text-xs font-bold uppercase tracking-widest text-primary">em destaque</p>
           </div>
           <Link to="/catalogo" className="hidden md:flex">
             <Button variant="outline" className="gap-2 border-border text-xs uppercase tracking-wider">
@@ -243,36 +223,6 @@ const Index = () => {
         </Link>
       </section>
 
-      {/* Testimonials */}
-      <section className="gradient-soft py-24">
-        <div className="container">
-          <div className="mb-16">
-            <p className="mb-2 text-xs font-bold uppercase tracking-widest text-primary">Depoimentos</p>
-            <h2 className="font-heading text-6xl text-foreground md:text-7xl">HISTÓRIAS<br />REAIS.</h2>
-          </div>
-          <div className="grid gap-4 md:grid-cols-3">
-            {testimonials.map((t, i) => (
-              <div key={i} className="group rounded-lg border border-border bg-card p-8 transition-all duration-300 hover:border-primary/50 hover:shadow-card-hover">
-                <div className="mb-4 flex gap-0.5">
-                  {Array.from({ length: t.rating }).map((_, j) => (
-                    <Star key={j} className="h-4 w-4 fill-accent text-accent" />
-                  ))}
-                </div>
-                <p className="mb-6 text-foreground/80 leading-relaxed">"{t.text}"</p>
-                <div className="flex items-center gap-3 border-t border-border pt-4">
-                  <div className="h-9 w-9 rounded-full gradient-primary flex items-center justify-center">
-                    <span className="text-xs font-bold text-primary-foreground">{t.name.charAt(0)}</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-sm text-foreground">{t.name}</p>
-                    <p className="text-xs text-muted-foreground uppercase tracking-wide">{t.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="container py-24">
@@ -305,7 +255,7 @@ const Index = () => {
             </div>
             <div className="mt-8 flex items-center gap-6 text-xs text-muted-foreground">
               {[
-                { icon: Shield, text: "Sem cartão de crédito" },
+                { icon: Shield, text: "Cartão de crédito" },
                 { icon: Zap, text: "Acesso imediato" },
                 { icon: Star, text: "Garantia de satisfação" },
               ].map(({ icon: Icon, text }) => (

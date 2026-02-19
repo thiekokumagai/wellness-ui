@@ -14,20 +14,19 @@ const Header = () => {
           <div className="flex h-9 w-9 items-center justify-center rounded-md gradient-primary shadow-glow transition-all duration-300 group-hover:scale-110">
             <Zap className="h-5 w-5 text-primary-foreground fill-primary-foreground" />
           </div>
-          <span className="text-xl font-heading tracking-widest text-foreground uppercase">Wellness<span className="text-primary">.</span></span>
+          <span className="text-xl font-heading tracking-widest text-foreground uppercase">Somma</span>
         </Link>
 
         <nav className="hidden items-center gap-0 md:flex">
           {[
-            { to: "/catalogo", label: "Profissionais" },
-            { to: "/quiz", label: "Quiz" },
-            { to: "/assinaturas", label: "Planos" },
+            { to: "/catalogo", label: "Encontrar profissionais" },
+            { to: "/assinaturas", label: "Seja um profissional" },
           ].map(({ to, label }) => (
             <Link key={to} to={to}>
               <Button
                 variant="ghost"
                 size="sm"
-                className="relative text-muted-foreground hover:text-foreground font-medium tracking-wide uppercase text-xs after:absolute after:bottom-1 after:left-1/2 after:h-px after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-4/5"
+                className="font-segoe relative text-muted-foreground hover:text-foreground font-medium tracking-wide uppercase text-xs after:absolute after:bottom-1 after:left-1/2 after:h-px after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-4/5"
               >
                 {label}
               </Button>
@@ -37,17 +36,17 @@ const Header = () => {
 
         <div className="hidden items-center gap-2 md:flex">
           <Link to="/dashboard-profissional">
-            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground text-xs uppercase tracking-wider">
+            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground text-xs uppercase tracking-wider font-segoe">
               Sou Profissional
             </Button>
           </Link>
           <Link to="/dashboard-aluno">
-            <Button variant="outline" size="sm" className="border-border text-xs uppercase tracking-wider">
+            <Button variant="outline" size="sm" className="border-border text-xs uppercase tracking-wider font-segoe">
               Login
             </Button>
           </Link>
           <Link to="/quiz">
-            <Button size="sm" className="gradient-primary text-primary-foreground shadow-glow text-xs uppercase tracking-wider font-bold">
+            <Button size="sm" className="gradient-primary text-primary-foreground shadow-glow text-xs uppercase tracking-wider font-bold font-segoe">
               Criar Conta
             </Button>
           </Link>

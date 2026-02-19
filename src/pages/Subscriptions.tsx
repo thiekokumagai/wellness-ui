@@ -52,42 +52,6 @@ const Subscriptions = () => {
             ))}
           </div>
         </section>
-
-        {/* Student subscription per professional */}
-        <section>
-          <div className="mb-8 text-center">
-            <Badge variant="secondary" className="mb-3">Para Alunos</Badge>
-            <h2 className="mb-2 text-3xl font-bold">Planos por Profissional</h2>
-            <p className="text-muted-foreground">Contrate planos diretamente com seus profissionais favoritos</p>
-          </div>
-          <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-3">
-            {[
-              { name: "Avulso", price: "120", unit: "/sessão", features: ["1 sessão", "Sem compromisso", "Chat por 7 dias", "Plano básico"] },
-              { name: "Mensal", price: "399", unit: "/mês", features: ["4 sessões/mês", "Chat ilimitado", "Plano completo", "Ajustes semanais", "Acompanhamento diário"] },
-              { name: "Trimestral", price: "999", unit: "/trimestre", features: ["12 sessões", "Chat ilimitado", "Plano completo", "Ajustes ilimitados", "Reavaliação mensal", "20% de desconto"] },
-            ].map((plan) => (
-              <Card key={plan.name} className="border-0 shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1">
-                <CardHeader className="text-center">
-                  <CardTitle className="text-lg">{plan.name}</CardTitle>
-                  <div className="mt-2">
-                    <span className="text-4xl font-extrabold text-primary">R${plan.price}</span>
-                    <span className="text-muted-foreground">{plan.unit}</span>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <ul className="space-y-2">
-                    {plan.features.map((f) => (
-                      <li key={f} className="flex items-center gap-2 text-sm">
-                        <CheckCircle className="h-4 w-4 text-primary shrink-0" /> {f}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className="w-full" variant="outline">Contratar</Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
       </div>
       <Footer />
     </div>
