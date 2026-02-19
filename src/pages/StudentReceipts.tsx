@@ -59,25 +59,6 @@ const StudentReceipts = () => {
           <p className="text-muted-foreground text-sm mt-1">Gerencie seus pagamentos e recebimentos</p>
         </div>
 
-        {/* Stats */}
-        <div className="grid gap-4 sm:grid-cols-3">
-          {[
-            { label: "Total Recebido", value: `R$ ${totalPago.toLocaleString("pt-BR")}`, icon: TrendingUp, color: "text-primary", bg: "bg-primary/10", glowColor: "shadow-glow" },
-            { label: "Recebido em Fev/26", value: `R$ ${totalMes.toLocaleString("pt-BR")}`, icon: DollarSign, color: "text-accent", bg: "bg-accent/10" },
-            { label: "A Receber", value: `R$ ${totalPendente.toLocaleString("pt-BR")}`, icon: Calendar, color: "text-muted-foreground", bg: "bg-secondary" },
-          ].map((s) => (
-            <div key={s.label} className={`rounded-lg border border-border bg-card p-5 ${s.glowColor ?? ""}`}>
-              <div className="flex items-center justify-between mb-3">
-                <p className="text-xs uppercase tracking-widest text-muted-foreground">{s.label}</p>
-                <div className={`flex h-8 w-8 items-center justify-center rounded-md ${s.bg}`}>
-                  <s.icon className={`h-4 w-4 ${s.color}`} />
-                </div>
-              </div>
-              <p className={`font-heading text-3xl ${s.color}`}>{s.value}</p>
-            </div>
-          ))}
-        </div>
-
         {/* Filters */}
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="relative flex-1 max-w-xs">
@@ -114,7 +95,7 @@ const StudentReceipts = () => {
               <thead>
                 <tr className="border-b border-border bg-secondary">
                   <th className="p-4 text-left text-[10px] font-bold uppercase tracking-widest text-muted-foreground">ID</th>
-                  <th className="p-4 text-left text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Aluno</th>
+                  <th className="p-4 text-left text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Profissional</th>
                   <th className="p-4 text-left text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Descrição</th>
                   <th className="p-4 text-left text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Tipo</th>
                   <th className="p-4 text-left text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Data</th>
