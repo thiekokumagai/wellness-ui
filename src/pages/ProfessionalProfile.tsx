@@ -288,7 +288,7 @@ const ProfessionalProfile = () => {
                 <div className="mb-4">
                   <p className="mb-2 flex items-center gap-2 text-sm font-semibold">
                     <CalendarIcon className="h-4 w-4 text-primary" />
-                    Selecione uma data
+                    Agendar aula experimental
                   </p>
                   <div className="rounded-xl border border-border bg-secondary/40 overflow-hidden">
                     <Calendar
