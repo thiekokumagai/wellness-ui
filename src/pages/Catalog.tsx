@@ -199,9 +199,9 @@ const Catalog = () => {
                 onChange={(e) => setSortBy(e.target.value as any)}
                 className="bg-transparent text-sm font-medium outline-none cursor-pointer text-foreground"
               >
-                <option value="rating">Melhores avaliados</option>
-                <option value="price_asc">Menor preço</option>
-                <option value="price_desc">Maior preço</option>
+                <option value="rating" className=" text-black">Melhores avaliados</option>
+                <option value="price_asc" className=" text-black">Menor preço</option>
+                <option value="price_desc" className=" text-black">Maior preço</option>
               </select>
             </div>
 
