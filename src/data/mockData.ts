@@ -69,7 +69,7 @@ export const professionals: Professional[] = [
     certifications: ["CREF 12345-G/SP", "Certificação CrossFit L2", "Especialização em Biomecânica"],
     benefits: ["Avaliação física completa", "Plano personalizado", "Acompanhamento por app", "Suporte via chat"],
     locations: ["Studio Fitness Vila Madalena", "Parque Ibirapuera", "Online"],
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "https://player.vimeo.com/video/1139633268",
   },
   {
     id: "2",
